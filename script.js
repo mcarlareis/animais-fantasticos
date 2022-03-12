@@ -1,32 +1,55 @@
-const linksInternos = document.querySelectorAll('a[href^="#"]');
+// //insertBefore animais, titulont.querySelinsertBefore;animais, titulonst animaisLista = document.querySelector('.animais-descricao';
+// // consoinsertBeforenanimais, tituloL);
+// // console.log(h1.outerHTML);
 
-function handleLink(event) {
-  event.preventDefault();
-  linksInternos.forEach((link) => {
-    link.classList.remove("ativo");
-  });
-  this.classList.add("ativo");
-}
+// // h1.outerHTML = '<p>Novo Titulo</p>';
+// //console.log(animaisLista.innerHTML);
 
-// linksInternos.forEach((link) => {
-//   link.addEventListener("click", handleLink);
-// });
+// const lista = document.querySelector('.animais-lista');
 
-// const todosElementos = document.querySelectorAll("body *");
+// // console.log (lista.previousElementSibling);
+// // console.log (lista.children[--lista.children.length]);
+// // console.log (lista.querySelector('li:last-child'));
 
-// function handleElemento(event) {
-//   event.currentTarget.remove();
-// }
+// console.log(lista.childNode);
 
-// todosElementos.forEach((elemento) => {
-//   elemento.addEventListener("click", handleElemento);
-// });
 
-function handleClickT(event) {
-  console.log(event.key);
-  if (event.key === 't') {
-      document.documentElement.classList.toggle('textomaior');
-  };
-};
+// const animais = document.querySelector('.animais');
+// const contato = document.querySelector('.contato');
+// const titulo = contato.querySelector('.titulo');
+// const mapa = document.querySelector('.mapa');
 
-window.addEventListener("keydown", handleClickT);
+
+// contato.replaceChild(lista, titulo);
+
+// // contato.insertBefore(animais, titulo);
+
+// const novoh1 = document.createElement('h1');
+// novoh1.innerText = 'Novo Titulo';
+// novoh1.classList.add('titulo');
+
+// mapa.appendChild(novoh1);
+
+// console.log(novoh1);
+
+const h1 = document.querySelector('h1');
+const faq = document.querySelector('.faq');
+
+const cloneH1 = h1.cloneNode(true);
+
+faq.appendChild(h1);
+
+const menu = document.querySelector('.menu');
+const copy = document.querySelector('.copy');
+const animais = document.querySelector('.animais');
+const cloneMenu = menu.cloneNode(true);
+
+copy.appendChild(cloneMenu);
+
+const faq = document.querySelector('.faq');
+const primeiroDt = faq.querySelector ('dt');
+const proximoDd = primeiroDt.nextElementSibling;
+
+//console.log(proximoDd);
+
+faq.innerHTML = animais.innerHTML;
